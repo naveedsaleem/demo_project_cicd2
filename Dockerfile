@@ -1,4 +1,4 @@
-FROM ubuntu:18.10
-RUN apt update && apt -y install apache2
+FROM ubuntu:18.04
+RUN apt update
 EXPOSE 80
-CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
+CMD ["/bin/bash"]
