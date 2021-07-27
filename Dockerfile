@@ -5,5 +5,6 @@ RUN apt install -y zip
 RUN apt install -y unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page247/kindle.zip /var/www/html/
 WORKDIR /var/www/html
+RUN unzip kindle.zip
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
